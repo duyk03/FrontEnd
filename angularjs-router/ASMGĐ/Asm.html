@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body ng-app="angularjs-Router">
+    <!--ng-include-->
+    <custom-header></custom-header>
+    <nav>
+      <a href="#!/"></a>
+      <a href="#!/list"></a>
+    </nav>
+    <main>
+      <div ng-view></div>
+    </main>
+    <custom-footer></custom-footer>
+    <script>
+      var API_URL = "http://localhost:3000/users/";
+    </script>
+
+    <script src="./libs/angular.min.js"></script>
+    <script src="./libs/angular-route.min.js"></script>
+    <script src="./controllerasm/ListController.js"></script>
+    <script src="./controllerasm/EditController.js"></script>
+    <script src="./controllerasm/AddController.js"></script>
+    <script src="./controllerasm/PersonalController.js"></script>
+
+    <script>
+      var app = angular.module("angularjs-Router", ["ngRoute"]);
+      app.component("customHeader", {
+        templateUrl: "./asm/header.html",
+      });
+      app.component("customFooter", {
+        templateUrl: "./asm/footer.html",
+      });
+
+      app.config(function ($routeProvider) {
+        $routeProvider
+          .when("/", {
+            templateUrl: "./asm/home.html",
+          })
+          .when("/personal", {
+            templateUrl: "./asm/personal.html",
+            controller: PersonalController,
+          })
+          .when("/qlch", {
+            templateUrl: "./asm/qlch.html",
+            controller: ListController,
+          })
+          .when("/add", {
+            templateUrl: "./asm/add.html",
+            controller: AddController,
+          })
+          .when("/edit/:id", {
+            templateUrl: "./asm/edit.html",
+            controller: EditController,
+          })
+          .when("/404", {
+            templateUrl: "./asm/404.html",
+          })
+          .otherwise({
+            redirectTo: "/404",
+          });
+      });
+    </script>
+  </body>
+</html>

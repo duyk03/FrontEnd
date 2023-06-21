@@ -1,0 +1,22 @@
+<h1>Thêm sản phẩm</h1>
+<div>
+  <div>
+    <input ng-model="nameInput" placeholder="Họ và tên" nameInput = /\w{6,}/; />
+  </div>
+  <div>
+    <input ng-model="emailInput" placeholder="Email" />
+  </div>
+  <div>
+    <input ng-model="avatarInput" placeholder="avatar" />
+  </div>
+  <div>
+    <input ng-model="statusInput" placeholder="status" />
+  </div>
+
+  <button
+    ng-click="onSave()"
+    ng-disabled="!nameInput || !emailInput || !avatarInput || !statusInput"
+  >
+    Lưu
+  </button>
+</div>

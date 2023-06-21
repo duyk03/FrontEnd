@@ -1,0 +1,22 @@
+<h1>Them sinh vien</h1>
+<div>
+  <div>
+    <input ng-model="nameInput" placeholder="Ho va ten" />
+  </div>
+  <div>
+    <input ng-model="emailInput" placeholder="email" />
+  </div>
+  <div>
+    <input ng-model="avatarInput" placeholder="avatar" />
+  </div>
+  <div>
+    <input ng-model="statusInput" placeholder="status" />
+  </div>
+  <button
+    ng-click="onSave349()"
+    ng-disabled="!nameInput 
+  || !emailInput || !avatarInput || !statusInput"
+  >
+    Luu
+  </button>
+</div>

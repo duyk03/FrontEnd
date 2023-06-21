@@ -1,0 +1,63 @@
+<h1>Thêm sản phẩm</h1>
+<div>
+  <form name="frmBonus">
+    <div>
+      <input
+        type="text"
+        ng-model="editItem.name"
+        required
+        placeholder="Họ và Tên"
+        name="txtFullname"
+      />
+      <p></p>
+      <label ng-show="frmBonus.txtFullname.$invalid"
+        >Bạn chưa nhập Họ và tên</label
+      >
+    </div>
+    <p></p>
+    <div>
+      <input
+        type="text"
+        ng-model="editItem.diaChi"
+        required
+        placeholder="Địa chỉ"
+        name="txtDiaChi"
+      />
+      <p></p>
+      <label ng-show="frmBonus.txtDiaChi.$invalid">Bạn chưa nhập Địa Chỉ</label>
+    </div>
+    <p></p>
+    <div>
+      <input
+        type="text"
+        ng-model="editItem.sdt"
+        required
+        placeholder="SĐT"
+        name="txtSdt"
+      />
+      <p></p>
+      <label ng-show="frmBonus.txtSdt.$invalid">Bạn chưa nhập SĐT</label>
+      <span
+        class="text-danger"
+        ng-show="form_product.price.$error.number && form_product.price.$touched"
+      >
+        Phải là số
+      </span>
+    </div>
+    <p></p>
+    <div>
+      <input type="text" ng-model="editItem.logo" placeholder="Logo" />
+    </div>
+    <p></p>
+    <div>
+      <input
+        type="text"
+        ng-model="editItem.trangThai"
+        placeholder="Trạng Thái"
+      />
+    </div>
+    <p></p>
+
+    <button type="button" ng-click="onSave()">Lưu</button>
+  </form>
+</div>

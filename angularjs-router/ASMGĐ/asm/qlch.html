@@ -1,0 +1,39 @@
+<body>
+  <div>
+    <h1>Quản lý cửa hàng</h1>
+    <h1>MSV: PH22349</h1>
+    <div>
+      <table class="table">
+        <a href="#!/add"><button>Thêm mới</button></a>
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Tên</td>
+            <td>Địa Chỉ</td>
+            <td>SĐT</td>
+            <td>Logo</td>
+            <td>Trạng Thái</td>
+            <th colspan="2">Thao tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="pt in danhsach">
+            <td>{{pt.id}}</td>
+            <td>{{pt.name}}</td>
+            <td>{{pt.diaChi}}</td>
+            <td>{{pt.sdt}}</td>
+            <td><img src="{{pt.logo}}" width="50" height="50" /></td>
+            <td>{{pt.trangThai == 0 ? "Hoạt động" :"Không hoạt động"}}</td>
+
+            <td>
+              <a href="#!/edit/{{pt.id}}">
+                <button ng-click="onEdit(pt.id)">Sửa</button></a
+              >
+              <button ng-click="onDelete(pt.id)">Xóa</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

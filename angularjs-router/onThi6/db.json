@@ -1,0 +1,18 @@
+{
+  "sv": [
+    {
+      "id": 1,
+      "name": "Duy1",
+      "email": "duy@ggmail.com",
+      "avatar": "http://1",
+      "status": 1
+    },
+    {
+      "name": "Duy2",
+      "email": "duy2@ggmail.com",
+      "avatar": "http://2",
+      "status": "0",
+      "id": 2
+    }
+  ]
+}

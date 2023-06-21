@@ -1,0 +1,41 @@
+<h1>Thêm sản phẩm</h1>
+<div>
+  <form name="frmBonus">
+    <div>
+      <input ng-model="nameInput" placeholder="Họ và Tên" />
+      <p></p>
+      <label ng-if="!nameInput">Bạn chưa nhập Họ và tên</label>
+    </div>
+    <p></p>
+    <div>
+      <input ng-model="diaChiInput" placeholder="Địa chỉ" />
+      <p></p>
+      <label ng-if="!diaChiInput">Bạn chưa nhập Địa Chỉ</label>
+    </div>
+    <p></p>
+    <div>
+      <input ng-model="sdtInput" placeholder="SĐT" />
+      <p></p>
+      <label ng-if="!sdtInput">Bạn chưa nhập SĐT</label>
+    </div>
+    <p></p>
+    <div>
+      <input type="text" ng-model="logoInput" placeholder="Logo" />
+    </div>
+    <p></p>
+    <div>
+      <input type="text" ng-model="trangThaiInput" placeholder="Trạng Thái" />
+    </div>
+    <!---->
+
+    <!---->
+    <p></p>
+    <button
+      type="button"
+      ng-click="onSave()"
+      ng-disabled="!nameInput || !diaChiInput || !sdtInput"
+    >
+      Lưu
+    </button>
+  </form>
+</div>

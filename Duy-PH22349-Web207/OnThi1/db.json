@@ -1,0 +1,25 @@
+{
+  "sv": [
+    {
+      "name": "Duy1",
+      "email": "duypkph22349@fpt.com",
+      "avatar": "Khong",
+      "status": "11",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Duy2",
+      "email": "duypkph22349@fpt.com",
+      "avatar": "Co",
+      "status": 0
+    },
+    {
+      "id": 3,
+      "name": "Duy3",
+      "email": "duypkph22349@fpt.com",
+      "avatar": "Co",
+      "status": 0
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BaiVeNha</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body ng-app="angular-app">
+    <!-- Trong 2 cặp ngoặc nhọn sẽ là tên thuộc tính của $scope trong controller này-->
+    <p>Tên: Phạm Khương Duy</p>
+    <p>MSV: PH22349</p>
+    <a class="btn btn-primary" href="baitapvn2.html" role="button">Thêm</a>
+
+    <div ng-controller="loopController">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Tên</th>
+            <th scope="col">Mô tả</th>
+            <th scope="col">Ảnh</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="motNguoiTao in danhSachNT ">
+            <td>1</td>
+            <td>{{motNguoiTao.ten}}</td>
+            <td>{{motNguoiTao.mota}}</td>
+            <td>
+              <img src="{{motNguoiTao.anh}}" width="50" height="50" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./libs/angular.min.js"></script>
+    <script>
+      var app = angular.module("angular-app", []);
+      //loopController
+      app.controller("loopController", function ($scope) {
+        $scope.danhSachNT = [
+          {
+            IDBVersionChangeEvent: 1,
+            ten: "Phạm Khương Duy",
+            mota: "Đẹp Zai",
+            anh: "https://cdn.sforum.vn/sforum/wp-content/uploads/2018/11/3-8.png",
+          },
+        ];
+      });
+    </script>
+  </body>
+</html>

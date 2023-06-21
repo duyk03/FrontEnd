@@ -1,0 +1,31 @@
+<div>
+  <h1>{{title}}</h1>
+  <a href="#!/add">Thêm</a>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Avatar</td>
+        <td>Status</td>
+        <td>Click</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="sv in list_sinhVien">
+        <td>{{sv.id}}</td>
+        <td>{{sv.name}}</td>
+        <td>{{sv.email}}</td>
+        <td>{{sv.avatar}}</td>
+        <td>{{sv.status == 0 ?"Hoạt động":"Không hoạt động"}}</td>
+        <td>
+          <a href="#!/edit/{{sv.id}}">
+            <button ng-click="onEdit(sv.id)">Sửa</button></a
+          >
+          <button ng-click="onDelete349(sv.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
